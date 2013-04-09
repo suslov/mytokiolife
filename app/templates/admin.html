@@ -2,9 +2,17 @@
 {% block content %}
 
 <form action="/ex_admin/post" method="POST">
-  <input type="text" name="title">
-  <input type="text" name="text">
+  <div>
+  <label for="title" class="">Title</label>
+  <input id="title" type="text" name="title" maxlength="255">
+  </div>
+  <div>
+  <label for="text" class="">Content</label>
+  <textarea id="text" rows="25" cols="70" name="text"></textarea>
+  </div>
+  <div>
   <input type="submit" name="blog" value="submit">
+  </div>
 </form>
 
 {% endblock %}

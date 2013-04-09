@@ -22,13 +22,13 @@ class Content(Base):
     categories = relation("Category",
                           secondary=content_categories,
                           backref="contents")
-    create_at = Column(DateTime)
+    created_at = Column(DateTime)
 
     def __init__(self,title,content,categories=None):
         self.title = title
         self.content = content
         self.categories = [Category(name) for name in categories] 
-        self.create_at = datetime.now()
+        self.created_at = datetime.now()
 
     def __repr__(self):
         return '<Content {}{}>'.format(self.id,self.title)

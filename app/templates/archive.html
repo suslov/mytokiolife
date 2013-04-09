@@ -2,6 +2,7 @@
 
 {% block content %}
 
-{{blog_content}}
+{{blog_content.title}}
+{{blog_content.content|markdown|safe}}
 
 {% endblock %}

@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
 {% for content in contents %}
-<a href="/archive/{{content.id}}">{{content}}</a>
+<a href="/archive/{{content.id}}">{{content.title}}</a>
 {% endfor %}
 {% endblock %}
