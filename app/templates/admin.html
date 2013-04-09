@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+
+<form action="/ex_admin/post" method="POST">
+  <input type="text" name="title">
+  <input type="text" name="text">
+  <input type="submit" name="blog" value="submit">
+</form>
+
+{% endblock %}
